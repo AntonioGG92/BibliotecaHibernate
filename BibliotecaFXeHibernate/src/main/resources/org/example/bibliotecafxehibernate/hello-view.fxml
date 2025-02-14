@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="root"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.bibliotecafxehibernate.HelloController"
+            prefHeight="800.0" prefWidth="1200.0"
+            stylesheets="@/style.css">
+
+    <!-- Encabezado -->
+    <top>
+        <HBox spacing="15" alignment="CENTER" styleClass="header-bar">
+            <Label text="📖 Biblioteca Digital" styleClass="header-title"/>
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <Button text="🔄 Refrescar" onAction="#initialize"/>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- Contenido central con pestañas -->
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" styleClass="tabPaneCustom">
+            <tabs>
+
+                <!-- TAB: Libros -->
+                <Tab text="Libros">
+                    <content>
+                        <VBox spacing="10" alignment="CENTER">
+                            <HBox spacing="10">
+                                <TextField fx:id="searchField" promptText="Buscar por título, autor o ISBN"/>
+                                <Button text="🔍 Buscar" onAction="#buscarLibros"/>
+                                <Button text="📚 Mostrar Todo" onAction="#initialize"/>
+                            </HBox>
+                            <TableView fx:id="booksTable">
+                                <columns>
+                                    <TableColumn fx:id="titleColumn" text="Título"/>
+                                    <TableColumn fx:id="isbnColumn" text="ISBN"/>
+                                    <TableColumn fx:id="authorColumn" text="Autor"/>
+                                    <TableColumn fx:id="publisherColumn" text="Editorial"/>
+                                    <TableColumn fx:id="yearColumn" text="Año"/>
+                                </columns>
+                            </TableView>
+                            <HBox spacing="10" alignment="CENTER">
+                                <Button text="➕ Agregar" onAction="#abrirVentanaAgregarLibro"/>
+                                <Button text="✏️ Modificar" onAction="#abrirVentanaModificarLibro"/>
+                                <Button text="🗑️ Eliminar" onAction="#eliminarLibro" styleClass="button-red"/>
+                            </HBox>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <!-- TAB: Autores -->
+                <Tab text="Autores">
+                    <content>
+                        <VBox spacing="10" alignment="CENTER">
+                            <HBox spacing="10">
+                                <TextField fx:id="searchField2" promptText="Buscar Nombre o Nacionalidad"/>
+                                <Button text="🔍 Buscar" onAction="#buscarAutor"/>
+                                <Button text="📋 Mostrar Todo" onAction="#initialize"/>
+                            </HBox>
+                            <TableView fx:id="authorsTable">
+                                <columns>
+                                    <TableColumn fx:id="nombreColumn" text="Nombre"/>
+                                    <TableColumn fx:id="nacionalidadColumn" text="Nacionalidad"/>
+                                </columns>
+                            </TableView>
+                            <HBox spacing="10" alignment="CENTER">
+                                <Button text="➕ Agregar" onAction="#abrirVentanaAgregarAutor"/>
+                                <Button text="✏️ Modificar" onAction="#abrirVentanaModificarAutor"/>
+                                <Button text="🗑️ Eliminar" onAction="#eliminarAutor" styleClass="button-red"/>
+                            </HBox>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <!-- TAB: Socios -->
+                <Tab text="Socios">
+                    <content>
+                        <VBox spacing="10" alignment="CENTER">
+                            <HBox spacing="10">
+                                <TextField fx:id="searchField3" promptText="Buscar Socio"/>
+                                <Button text="🔍 Buscar" onAction="#buscarSocios"/>
+                                <Button text="📋 Mostrar Todo" onAction="#initialize"/>
+                            </HBox>
+                            <TableView fx:id="sociosTable">
+                                <columns>
+                                    <TableColumn fx:id="nombreColumn2" text="Nombre"/>
+                                    <TableColumn fx:id="direccionColumn" text="Dirección"/>
+                                    <TableColumn fx:id="telefonoColumn" text="Teléfono"/>
+                                </columns>
+                            </TableView>
+                            <HBox spacing="10" alignment="CENTER">
+                                <Button text="➕ Agregar" onAction="#abrirVentanaAgregarSocio"/>
+                                <Button text="✏️ Modificar" onAction="#abrirVentanaModificarSocio"/>
+                                <Button text="🗑️ Eliminar" onAction="#eliminarSocio" styleClass="button-red"/>
+                            </HBox>
+                        </VBox>
+                    </content>
+                </Tab>
+
+                <!-- TAB: Préstamos -->
+                <Tab text="Préstamos">
+                    <content>
+                        <VBox spacing="10" alignment="CENTER">
+                            <HBox spacing="10">
+                                <TextField fx:id="buscarTextField" promptText="Buscar Préstamo"/>
+                                <Button text="🔍 Buscar" onAction="#buscarPrestamos"/>
+                                <Button text="📋 Mostrar Todo" onAction="#initialize"/>
+                            </HBox>
+                            <TableView fx:id="loansTable">
+                                <columns>
+                                    <TableColumn fx:id="libroColumn" text="Libro"/>
+                                    <TableColumn fx:id="socioColumn" text="Socio"/>
+                                    <TableColumn fx:id="fechaPrestamColumn" text="Fecha Préstamo"/>
+                                    <TableColumn fx:id="fechaDevolucionColumn" text="Fecha Devolución"/>
+                                    <TableColumn fx:id="estadoColumn" text="Estado"/>
+                                </columns>
+                            </TableView>
+                            <HBox spacing="10" alignment="CENTER">
+                                <Button text="📖 Registrar Préstamo" onAction="#abrirVentanaRegistrarPrestamo"/>
+                                <Button text="✅ Registrar Devolución" onAction="#registrarDevolucion"/>
+                            </HBox>
+                        </VBox>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

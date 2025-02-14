@@ -1,0 +1,203 @@
+/* Fondo general del contenedor principal */
+.mainContainer {
+    -fx-background-color: #FAF4FF; /* Lila muy claro */
+}
+
+/* VBox principal */
+.vboxMain {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+}
+
+/* Pane superior (encabezado) */
+.pane-header {
+    -fx-background-color: #5C73F2; /* Lila/Azul pastel */
+}
+
+/* Estilo para el label de bienvenida */
+.welcomeLabel {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 30px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-background-color: transparent;
+}
+
+/* Estilo del TabPane */
+.tabPaneCustom {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-tab-min-height: 30;
+    -fx-tab-max-width: 120;
+}
+
+/* Cada Tab */
+.tab {
+    -fx-background-color: #E8EAF6; /* Fondo suave para pestañas */
+    -fx-text-base-color: #2e2e2e;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+}
+
+/* TableView: fondo turquesa, bordes suaves */
+.table-view {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-border-color: #40E0D0;
+    -fx-border-width: 1;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+/* Columnas de la tabla */
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+/* Filas de la tabla */
+.table-view .table-row-cell {
+    -fx-background-color: #F3F5FF; /* Suave tono lila claro */
+    -fx-border-color: #40E0D0;
+}
+
+/* Fila seleccionada */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #C5CAE9; /* Lila un poco más oscuro */
+}
+
+/* Botones generales */
+.button {
+    -fx-background-color: #7BC6AE; /* Verde pastel */
+    -fx-text-fill: #2e2e2e;
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+}
+
+/* Botón "green" para acciones específicas */
+.button-green {
+    -fx-background-color: #F48FB1; /* Rosa pastel */
+    -fx-text-fill: #2e2e2e;
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Botón "red" para eliminar o acciones críticas */
+.button-red {
+    -fx-background-color: #F44336; /* Rojo */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-border-color: #2E8B8B;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+/* Ajustes para HBox y VBox */
+.hbox, .vbox {
+    -fx-spacing: 10;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* ────────────────────────────────────────── */
+/* CLASES PARA VENTANAS EMERGENTES (DIALOGOS) */
+/* ────────────────────────────────────────── */
+
+/* Fondo de la ventana emergente */
+.dialogPane {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-padding: 20;
+}
+
+/* Título del diálogo (label) */
+.dialogTitle {
+    -fx-text-fill: #2e2e2e;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}
+
+/* Botón principal en la ventana emergente */
+.dialogButton {
+    -fx-background-color: #7BC6AE; /* Verde pastel */
+    -fx-text-fill: #2e2e2e;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: transparent;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-border-color: #2E8B8B;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+/* DatePicker */
+.date-picker {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-border-color: #2E8B8B;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+/* Menú desplegable */
+.menu-button {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-border-color: #2E8B8B;
+    -fx-text-fill: #2e2e2e;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+/* Menú lateral */
+.side-menu {
+    -fx-background-color: #40E0D0; /* Turquesa */
+    -fx-padding: 10;
+    -fx-spacing: 10;
+}
+
+/* Barra de encabezado */
+.header-bar {
+    -fx-background-color: #5C73F2; /* Azul pastel */
+    -fx-padding: 15;
+}
+
+/* Título del encabezado */
+.header-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}

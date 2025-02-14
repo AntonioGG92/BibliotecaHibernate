@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.bibliotecafxehibernate.Libro.ModificarLibroController"
+            styleClass="dialogPane">
+
+    <!-- Hoja de estilos para esta ventana -->
+    <stylesheets>
+        <URL value="@/style.css" />
+    </stylesheets>
+
+    <children>
+        <VBox alignment="CENTER"
+              layoutX="50.1" layoutY="50.0"
+              prefHeight="200.0" prefWidth="400.0"
+              spacing="20.0">
+            <children>
+
+                <!-- Título de la ventana -->
+                <Label text="Modificar Libro" styleClass="dialogTitle">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+
+                <!-- Campos de texto -->
+                <TextField fx:id="titleField"       promptText="Título" />
+                <TextField fx:id="isbnField"        promptText="ISBN" />
+                <TextField fx:id="authorField"      promptText="Autor" />
+                <TextField fx:id="publisherField"   promptText="Editorial" />
+                <TextField fx:id="yearField"        promptText="Año de Publicación" />
+
+            </children>
+        </VBox>
+
+        <!-- Botón para actualizar el libro -->
+        <Button layoutX="224.0" layoutY="334.0"
+                mnemonicParsing="false"
+                text="Actualizar"
+                onAction="#actualizarLibro"
+                styleClass="dialogButton"/>
+    </children>
+</AnchorPane>
